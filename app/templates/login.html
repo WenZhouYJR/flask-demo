@@ -18,8 +18,12 @@
     <form action="" method="post" name="login">
         {{ form.hidden_tag() }}
         <p>
-            Please enter you OpenID:<br>
-            {{ form.openid(size=80) }}<br>
+{#            Please enter you OpenID:<br>#}
+{#            {{ form.openid(size=80) }}<br>#}
+            Your Name:<br>
+            {{ form.zhy_name(size=50) }}<br>
+            Your Email:<br>
+            {{ form.zhy_email(size=60) }}<br>
             {% for error in form.openid.errors %}
                 <span style="color: red;">[{{ error }}]</span>
             {% endfor %}<br>
